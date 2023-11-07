@@ -4,5 +4,5 @@
 
 ## Architecture
 
-![Images](Images\architecture.JPG)
+![Images](https://github.com/ratna-workspace/Pyspark_Databricks_Usecasess/blob/main/Usecases/Spark_Streaming_Event_hub/Images/architecture.JPG)
 
