@@ -1,4 +1,4 @@
 ## Architecture
 
 
-![Images](Images\d2d.JPG)
+![Images](Images\d2d.jpg)
