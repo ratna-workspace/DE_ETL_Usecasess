@@ -1,0 +1,70 @@
+--source table
+CREATE TABLE employees(  
+    emp_id INT primary key,  
+    emp_name VARCHAR(100),  
+    emp_age INT,  
+    emp_salary FLOAT,  
+    emp_department VARCHAR(100) ,
+    emp_gender VARCHAR(10),
+    emp_email VARCHAR(100),
+    emp_address VARCHAR(200)
+); 
+
+--insertion script
+INSERT INTO employees (emp_id, emp_name, emp_age, emp_salary, emp_department, emp_gender, emp_email, emp_address)
+SELECT
+    seq,
+    CONCAT('Employee', seq),
+    FLOOR(RANDOM() * 40) + 20,
+    ROUND((RANDOM() * 50000 + 50000)::numeric, 2), -- Corrected ROUND function usage
+    CASE
+        WHEN seq % 5 = 0 THEN 'HR'
+        WHEN seq % 5 = 1 THEN 'IT'
+        WHEN seq % 5 = 2 THEN 'Finance'
+        WHEN seq % 5 = 3 THEN 'Sales'
+        ELSE 'Operations'
+    END,
+    CASE
+        WHEN seq % 2 = 0 THEN 'Male'
+        ELSE 'Female'
+    END,
+    CONCAT('employee', seq, '@company.com'),
+    CONCAT('Address', seq)
+FROM (
+    SELECT ROW_NUMBER() OVER (ORDER BY random()) AS seq
+    FROM generate_series(1, 100000)
+) AS t;
+
+
+--checkpoint table
+CREATE TABLE emp_checkpoint(
+emp_id INT);
+
+--Destination table
+CREATE TABLE agg_employee (  
+emp_department VARCHAR(100),
+avg_sal FLOAT,
+sum_sal FLOAT,
+min_sal Float,
+max_sal Float,
+highest_sal_emp_id INT,
+highest_sal_emp_name VARCHAR(100),
+"timestamp" timestamp)
+
+
+--load more records to source table to verify
+INSERT INTO employees (emp_id, emp_name, emp_age, emp_salary, emp_department, emp_gender, emp_email, emp_address)
+VALUES
+    (10001, 'Employee_id 10001', 30, 60000.0, 'HR',  'Male', 'Employee10001@company.com', 'Address10001'),
+    (10002, 'Employee_id 10002', 35, 65000.0, 'Sales','Female', 'Employee10002@company.com', 'Address10002'),
+    (10003, 'Employee_id 10003', 28, 55000.0, 'IT',   'Male', 'Employee10003@company.com', 'Address10003'),
+    (10004, 'Employee_id 10004', 32, 62000.0, 'HR', 'Female', 'Employee10004@company.com', 'Address10004'),
+    (10005, 'Employee_id 10005', 29, 58000.0, 'Finance', 'Male', 'Employee10005@company.com', 'Address10005'),
+    (10006, 'Employee_id 10006', 33, 67000.0, 'Sales', 'Female', 'Employee10006@company.com', 'Address10006'),
+    (10007, 'Employee_id 10007', 31, 60000.0, 'HR', 'Male', 'Employee10007@company.com', 'Address10007'),
+    (10008, 'Employee_id 10008', 27, 54000.0, 'IT', 'Female', 'Employee10008@company.com', 'Address10008'),
+    (10009, 'Employee_id 10009', 34, 66000.0, 'HR', 'Male', 'Employee10009@company.com', 'Address10009'),
+    (10010, 'Employee_id 10010', 30, 62000.0, 'Finance', 'Female', 'Employee10010@company.com', 'Address10010');
+
+
+

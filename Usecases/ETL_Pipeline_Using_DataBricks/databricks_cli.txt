@@ -1,0 +1,17 @@
+//Generate user token 
+databricks configure --token //enter weburl (https://adb-52.azuredatabricks.net/)
+Token :: enter the token 
+verify databricks.cfg
+
+databricks secrets create-scope --scope usecaseScope --initial-manage-principal users
+databricks secrets put --scope usecaseScope --key storage_account_access_key
+databricks secrets put --scope usecaseScope --key storage_account_name
+databricks secrets put --scope usecaseScope --key container_name
+databricks secrets put --scope usecaseScope --key storage_account_access_key
+databricks secrets put --scope usecaseScope --key database_url
+databricks secrets put --scope usecaseScope --key postgres_table
+databricks secrets put --scope usecaseScope --key user
+databricks secrets put --scope usecaseScope --key password
+
+
+
