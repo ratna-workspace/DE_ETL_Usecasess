@@ -4,5 +4,5 @@
 
 ## Architecture
 
-![Images](https://github.com/ratna-workspace/Pyspark_Databricks_Usecasess/blob/main/Usecases/Spark_Streaming_Event_hub/Images/architecture.JPG)
+![Images](https://github.com/ratna-workspace/DE_ETL_Usecasess/blob/main/AWS_Usecases/AWS_S3_Lambda_Glue/Images/arch.jpg)
 
