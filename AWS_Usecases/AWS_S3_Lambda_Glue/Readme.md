@@ -1,5 +1,5 @@
 <h1 align="center">
-    Spark Streaming Pipeline
+    ETL_Glue
 </h1>
 
 ## Architecture
