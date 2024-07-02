@@ -1,4 +1,4 @@
 ## Architecture
 
 
-![Images](https://github.com/ratna-workspace/Pyspark_Databricks_Usecasess/blob/main/Usecases/From_DB_To_DB/Images/d2d.JPG)
+![Images](https://github.com/ratna-workspace/DE_ETL_Usecasess/blob/main/Databricks_Usecases/From_DB_To_DB/Images/d2d.JPG)
