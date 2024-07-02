@@ -15,8 +15,8 @@ def run_glue_job(Args):
 def lambda_handler(event, context):
     print(event)
 
-    bucket = event["detail"]["requestParameters"]["bucketName"]
-    key = event["detail"]["requestParameters"]["key"]
+    bucket = event['Records'][0]['s3']['bucket']['name']
+    key = event['Records'][0]['s3']['object']['key']
     print(bucket , key)
     
     #Args pass bucket name,filename to glue and it will get through getResolvedOptions() with sys
