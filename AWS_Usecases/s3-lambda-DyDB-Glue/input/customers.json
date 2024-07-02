@@ -1,0 +1,40 @@
+{
+  "customers": [
+    {
+      "customerID": "C001",
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "phone": "555-1234",
+      "address": {
+        "street": "123 Elm St",
+        "city": "Springfield",
+        "state": "IL",
+        "postalCode": "62701"
+      }
+    },
+    {
+      "customerID": "C002",
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "phone": "555-5678",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Lincoln",
+        "state": "NE",
+        "postalCode": "68508"
+      }
+    },
+    {
+      "customerID": "C003",
+      "name": "Carol White",
+      "email": "carol.white@example.com",
+      "phone": "555-8765",
+      "address": {
+        "street": "789 Pine St",
+        "city": "Columbus",
+        "state": "OH",
+        "postalCode": "43215"
+      }
+    }
+  ]
+}

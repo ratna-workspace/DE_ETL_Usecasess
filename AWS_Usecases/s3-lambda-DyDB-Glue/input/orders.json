@@ -1,0 +1,61 @@
+{
+  "orders": [
+    {
+      "orderID": "O001",
+      "customerID": "C001",
+      "orderDate": "2023-06-15",
+      "status": "Shipped",
+      "items": [
+        {
+          "productID": "P001",
+          "productName": "Laptop",
+          "quantity": 1,
+          "price": 1200.00
+        },
+        {
+          "productID": "P002",
+          "productName": "Mouse",
+          "quantity": 2,
+          "price": 25.00
+        }
+      ],
+      "totalAmount": 1250.00
+    },
+    {
+      "orderID": "O002",
+      "customerID": "C002",
+      "orderDate": "2023-06-16",
+      "status": "Processing",
+      "items": [
+        {
+          "productID": "P003",
+          "productName": "Keyboard",
+          "quantity": 1,
+          "price": 50.00
+        }
+      ],
+      "totalAmount": 50.00
+    },
+    {
+      "orderID": "O003",
+      "customerID": "C003",
+      "orderDate": "2023-06-17",
+      "status": "Delivered",
+      "items": [
+        {
+          "productID": "P004",
+          "productName": "Monitor",
+          "quantity": 1,
+          "price": 200.00
+        },
+        {
+          "productID": "P005",
+          "productName": "USB Cable",
+          "quantity": 3,
+          "price": 10.00
+        }
+      ],
+      "totalAmount": 230.00
+    }
+  ]
+}
